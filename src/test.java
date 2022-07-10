@@ -42,17 +42,7 @@ public class test {
 			break;
 		
 		default:
-			
-			/*Columns:
-				idUsuario	int(11) AI PK
-				Nombre	varchar(50)
-				Apellido	varchar(50)
-				dni	varchar(50)
-				correo	varchar(50)
-				pass	varchar(50)
-				EsFrecuente	tinyint(1)
-				idRol	int(11)
-				idDomicilio	int(11)*/
+
 
 			System.out.println("BIENVENIDO REGISTRO. COMPLETE CON SUS DATOS");
 			System.out.println("INGRESE SU NOMBRE COMPLETO");

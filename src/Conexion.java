@@ -96,6 +96,24 @@ public class Conexion {
 		      
 		}
 		
+		public void ProductoCarrito(ArrayList<String>elementos) throws SQLException {
+			//System.out.println("Creando Statement");
+			stmt= conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			String sql;
+			sql="insert into carrito (idCarrito, nombre, precio) "+
+			" values (?,?,?)";
+			
+			 PreparedStatement preparedStmt = conn.prepareStatement(sql);
+			    
+			  preparedStmt.setInt (1,Integer.parseInt(elementos.get(0) ));
+		      preparedStmt.setString (2,elementos.get(1) );
+		      preparedStmt.setInt (3,Integer.parseInt(elementos.get(2) ));
+		      
+		      
+		      preparedStmt.execute();
+		      
+		}
+		
 
 	public static void main(String[] args) {
 
